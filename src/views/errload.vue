@@ -1,6 +1,6 @@
 <template>
     <div>
-        木有这个页面呀呀
+        404
     </div>
 </template>
 

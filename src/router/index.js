@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import sectiona from '@/components/sectiona'
-import err from '@/components/404'
+import HelloWorld from '@/views/HelloWorld'
+import Login from '@/views/login'
+import Errload from '@/views/errload'
 
 Vue.use(Router)
 
@@ -14,14 +14,14 @@ export default new Router({
             component: HelloWorld
         },
         {
-            path: '/seca',
-            name: 'sectiona',
-            component: sectiona
+            path: '/login',
+            name: 'login',
+            component: Login
         },
         {
-            path:"*",
-            name:'err',
-            component:err
+            path: '*',
+            name: 'errorload',
+            component: Errload
         }
     ]
 })
