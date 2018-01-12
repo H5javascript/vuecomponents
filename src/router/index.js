@@ -4,6 +4,8 @@ import HelloWorld from '@/views/HelloWorld'
 import Login from '@/views/login'
 import Errload from '@/views/errload'
 
+import SectionA from '@/views/sectionA'
+
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +19,11 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: Login
+        },
+        {
+            path: '/sectiona',
+            name: 'sectiona',
+            component: SectionA
         },
         {
             path: '*',

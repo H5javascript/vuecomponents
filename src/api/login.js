@@ -8,14 +8,6 @@ export function loginIn(data) {
   })
 }
 
-export function logout() {
-  return request({
-    url: '/login/logout',
-    method: 'post',
-    data: {}
-  })
-}
-
 export function getUserInfo(token) {
   return request({
     url: '/user/info',

@@ -7,34 +7,29 @@
         {{gender}}
         <img v-bind:src="avatar" alt="">
 
-        <router-link to="/sectiona">去a页面</router-link>
-        <div>
-            <calender
-                :marks="marks"
-            ></calender>
-        </div>
+        <button @click="loginout()">登出</button>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
     import { mapGetters } from 'vuex'
-    import calender from  '@/components/Calender'
     export default {
         name: 'HelloWorld',
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App',
-                marks:['2018-01-12']
+                marks: ['2018-01-12']
             }
         },
         methods: {
-
+            loginout(){
+                this.$store.dispatch('loginOut').then(()=>{
+                    this.$router.push({path:'/login'});
+                })
+            }
         },
         computed: {
             ...mapGetters(['token', 'role', 'phone', 'gender', 'avatar', 'name'])
-        },
-        components:{
-            calender
         }
     }
 </script>

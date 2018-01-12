@@ -1,12 +1,6 @@
 <template>
     <div class="hello">
-        {{token}}
-        {{name}}
-        {{phone}}
-        {{role}}
-        {{gender}}
         这里是登录的页面  你点一下 就登录了
-        <img v-bind:src="avatar" alt="">
         <button @click="fetchList()">发送</button>
     </div>
 </template>
@@ -17,15 +11,18 @@
         name: 'HelloWorld',
         data () {
             return {
-                msg: 'Welcome to Your Vue.js App'
+                msg: ''
             }
         },
         methods: {
             fetchList(){
                 this.$store.dispatch('LoginIn', {
-                    name: "小王"
+                    name: "admin",
+                    password:'admin'
                 }).then(()=>{
                     this.$router.push({ path: '/' })
+                }).catch(error=>{
+                    console.log('登录失败')
                 })
             }
         },

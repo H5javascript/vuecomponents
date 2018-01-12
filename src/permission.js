@@ -13,6 +13,10 @@ router.beforeEach((to, from, next)=> {
                 store.dispatch('getUserInfo').then(res=>{
                     console.log(res);
                     next()
+                }).catch(err=>{
+                    store.dispatch('loginOut').then(()=>{
+                        next('/login')
+                    })
                 })
             }else {
                 next()

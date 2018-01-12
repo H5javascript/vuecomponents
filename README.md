@@ -8,7 +8,8 @@
   
   3 mock 做数据模拟 
   
-  4 分module 的vuex 做store 存储
+  4 分module 的vuex 做store 存储 更关注于功能模块
   
   5 登录保存 利用 sessionStorage 存入token 首先要使用 token 获取用户信息（1次）
 
+  
