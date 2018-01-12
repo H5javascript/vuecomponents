@@ -6,9 +6,11 @@ import router from './router'
 import store from './store'
 import './permission'
 import './mock'
+import Calender from '@/components/calender'
 
 Vue.config.productionTip = false
 
+Vue.use(Calender);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

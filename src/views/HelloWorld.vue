@@ -18,7 +18,6 @@
 
 <script type="text/ecmascript-6">
     import { mapGetters } from 'vuex'
-    import calender from  '@/components/Calender'
     export default {
         name: 'HelloWorld',
         data () {
@@ -32,9 +31,6 @@
         },
         computed: {
             ...mapGetters(['token', 'role', 'phone', 'gender', 'avatar', 'name'])
-        },
-        components:{
-            calender
         }
     }
 </script>
