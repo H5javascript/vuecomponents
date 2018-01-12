@@ -140,6 +140,7 @@
 
     .calender {
         width: 100%;
+        background-color: #ffffff;
     }
 
     .c_header {

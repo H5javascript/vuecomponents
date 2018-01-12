@@ -5,11 +5,12 @@
 </template>
 
 <script>
+
 export default {
   name: 'app'
 }
 </script>
 
 <style>
-
+    @import './assets/app/common.less';
 </style>
