@@ -1,21 +1,14 @@
-# rtest
+# vue 快速构建项目
 
-> route test
+## 参考 vue-element-admin
 
-## Build Setup
+~ 1 对登录鉴权 统一处理
 
-``` bash
-# install dependencies
-npm install
+  2 路由白名单  主要在导航守卫里面加入路由白名单 做用户权限菜单过滤
+  
+  3 mock 做数据模拟 
+  
+  4 分module 的vuex 做store 存储
+  
+  5 登录保存 利用 sessionStorage 存入token 首先要使用 token 获取用户信息（1次）
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
