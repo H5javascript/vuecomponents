@@ -12,4 +12,4 @@
   
   5 登录保存 利用 sessionStorage 存入token 首先要使用 token 获取用户信息（1次）
 
-  ['calender']('https://raw.githubusercontent.com/ChenFaYun/calenderByVue/master/static/calender.png')
+  ['calender'](https://raw.githubusercontent.com/ChenFaYun/calenderByVue/master/static/calender.png)
