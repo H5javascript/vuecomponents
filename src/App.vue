@@ -12,5 +12,8 @@ export default {
 </script>
 
 <style>
-    @import './assets/app/common.less';
+    @import './styles/app/common.less';
+    #app{
+        height: 100%;
+    }
 </style>

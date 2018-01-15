@@ -1,13 +1,12 @@
 <template>
     <div class="hello">
-        {{token}}
-        {{name}}
-        {{phone}}
-        {{role}}
-        {{gender}}
-        <img v-bind:src="avatar" alt="">
-
-        <button @click="loginout()">登出</button>
+        <h1>日历组件</h1>
+        <div>
+            <calender
+                    :marks="marks"
+            ></calender>
+        </div>
+        <router-link to="/sectionb">index 组件</router-link>
     </div>
 </template>
 
@@ -18,7 +17,13 @@
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App',
-                marks: ['2018-01-12']
+                marks: ['2018-01-12'],
+
+                a:{
+                    b:1,
+                    c:[1,2,3]
+                },
+
             }
         },
         methods: {
@@ -26,10 +31,18 @@
                 this.$store.dispatch('loginOut').then(()=>{
                     this.$router.push({path:'/login'});
                 })
+            },
+            changeB(){
+                this.a.b = '2'
             }
         },
         computed: {
             ...mapGetters(['token', 'role', 'phone', 'gender', 'avatar', 'name'])
+        },
+        watch:{
+           'a':function(val){
+               console.log(val);
+           }
         }
     }
 </script>

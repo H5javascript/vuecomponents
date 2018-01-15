@@ -7,10 +7,12 @@ import store from './store'
 import './permission'
 import './mock'
 import Calender from '@/components/calender'
+import IndexList from '@/components/indexList'
 
 Vue.config.productionTip = false
 
 Vue.use(Calender);
+Vue.use(IndexList);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

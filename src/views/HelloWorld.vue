@@ -1,18 +1,12 @@
 <template>
     <div class="hello">
+        当前登录信息： <br>
         {{token}}
         {{name}}
         {{phone}}
         {{role}}
         {{gender}}
-        <img v-bind:src="avatar" alt="">
-
-        <router-link to="/sectiona">去a页面</router-link>
-        <div>
-            <calender
-                :marks="marks"
-            ></calender>
-        </div>
+        <router-link to="/sectiona">日历组件</router-link>
     </div>
 </template>
 
@@ -37,5 +31,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    h1{
+        text-align: center;
+        padding: 10px;
+    }
 </style>
